@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>InstaPhoto</title>
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/css.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+
+    </head>
+    
+    <body>
+
+      <div data-role="page" id="principal">
+
+        <div data-role="header" id="cabecalho">
+            
+            <h1>InstaPhoto</h1>
+
+        </div>
+
+        <div data-role="main" id="conteudo" class="ui-content">
+            
+            <div id="logon">
+
+              <p class="titulo">InstaPhoto</p>
+
+              <label for="usuario">Usuário:</label>
+              <input type="email" name="usuario" id="usuario">
+
+              <label for="senha">Senha:</label>
+              <input type="password" name="senha" id="senha">
+
+              <button data-icon="check" data-iconpos="top" type="button" onclick="verificaUsuario()" id="enviar" class="margem-topo">Entrar</button>
+
+              <button data-icon="edit" type="button" id="cadastro" onclick="cadastro()" class="margem-topo">Ainda não tenho cadastro</button>
+                
+            </div>
+            
+            <div id="user">
+            
+                <div class="ui-grid-a">
+	               <div id="Perfil" class="ui-block-a" style="width:40%"></div>
+     
+	               <div  class="ui-block-b" style="width:60%; text-align: center">
+		              <span id="Nome"></span>
+                       <button type='button' data-icon="camera" id="btnPublica" onclick="publicar()" style="width:90%; margin-left: auto;margin-right: auto">Publicar</button>
+                       <button type='button' data-icon="power" id="btnSair" onclick="sair()" style="width:90%; margin-left: auto;margin-right: auto">Sair</button>
+	               </div>
+                </div><!-- /grid-a -->
+            
+            </div>
+            
+            <div id="pub" style="margin-bottom: 50px;">
+            
+            </div>
+            
+            <div id="foto" class="margem-topo">
+            
+               <img id="exibeFoto">
+               <label for comentario>Comentário: </label>
+               <input id="comentario" type="text" maxlength="144">
+               <button type="button" data-icon="check" id="btnUpload" onclick="upload()" style="width:90%; margin-left: auto;margin-right: auto">Publicar</button>
+            
+            </div>
+            
+            <div id="novocadastro">
+            <div id="fotoPerfil"></div>
+            <label for cad_nome>Nome:</label>
+            <input id="cad_nome" type="text" maxlength="50">
+            <label for cad_email>Email:</label>
+            <input id="cad_email" type="email" maxlength="50">
+                <div id="mensagem"></div>
+            <label for cad_senha>Senha:</label>
+            <input id="cad_senha" type="password" maxlength="15">
+                
+                <button data-icon="camera" type="button" onclick="fotoPerfil()" id="btnPerfil" class="margem-topo">Foto Perfil</button>
+                
+                <button data-icon="check" data-iconpos="top" type="button" onclick="cadastraUsuario()" id="btnCadastrar" class="margem-topo">Cadastrar</button>
+            
+            </div>
+            
+
+        </div>
+
+    <div data-role="footer" id="rodape">
+      <h1>Todos os direitos reservados</h1>
+    </div>
+
+    </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+    
+    </body>
+
+</html>
